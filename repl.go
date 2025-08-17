@@ -15,8 +15,9 @@ func startRepl() {
 		scanner.Scan()
 		text := scanner.Text()
 		
+		cleaned:= cleanInput(text)
 
-		fmt.Println("echoing:", text)
+		fmt.Println("echoing:", cleaned)
 	}
 
 }
