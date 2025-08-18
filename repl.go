@@ -12,10 +12,14 @@ func startRepl() {
 
 	for {
 		fmt.Print("Type something >")
+
 		scanner.Scan()
 		text := scanner.Text()
-		
-		cleaned:= cleanInput(text)
+
+		cleaned := cleanInput(text)
+		if len(cleaned) == 0 {
+			continue
+		}
 
 		fmt.Println("echoing:", cleaned)
 	}
